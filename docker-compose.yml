@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:13.2
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      POSTGRES_USER: el-trainig
+      POSTGRES_PASSWORD: el-trainig123
+    ports:
+      - 15432:5432
+
+volumes:
+  db_data:
